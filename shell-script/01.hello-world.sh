@@ -1,1 +1,5 @@
-# Hai im learning DevOps with AWS
+#!/bin/bash
+
+# this is comment
+
+echo "hello shell-script"
