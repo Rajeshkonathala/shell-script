@@ -7,6 +7,6 @@ then
     echo "ERROR:: Please run this script with root access"
 else
     echo "you are root user"
-fi
+fi #fi means reverse of if, indication of condition end
 
 yum install mysql -y
