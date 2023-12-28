@@ -11,10 +11,10 @@ LOGFILE="/tmp/$0-TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then    
-        echo "ERROR:: $2 ... \e[31m FAILED"
+        echo \e[31m "ERROR:: $2 ... FAILED"
         exit 1
     else
-        echo "$2 ... \e[32m SUCCESS"
+        echo \e[32m "$2 ... SUCCESS"
     fi
 }
 
