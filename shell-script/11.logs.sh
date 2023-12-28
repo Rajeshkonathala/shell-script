@@ -3,7 +3,7 @@
 ID=$(id -u)
 TIMESTAMP=(date +%F-%H-%M-%S)
 
-    echo "$( 1 ne 0 )"
+    echo "( $1 ne 0 )"
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
