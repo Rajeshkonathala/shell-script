@@ -6,7 +6,7 @@ Y="e\[33m"
 N="e\[0m"
 if [ "$NUMBER" -gt 100 ]
 then
-    echo -e "Give number $NUMBER is $G greater $N than 100"
+    echo -e "Give number $NUMBER is $G greater than 100 $N"
 else
-    echo "Give number $NUMBER is $R not greater $N than 100"
+    echo "Give number $NUMBER is $R not greater than 100 $N"
 fi
