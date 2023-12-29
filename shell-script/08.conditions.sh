@@ -9,5 +9,5 @@ if [ "$NUMBER" -gt 100 ]
 then
     echo -e "Give number $G $NUMBER is greater than 100"
 else
-    echo "Give number $R $NUMBER is not greater than 100"
+    echo -e "Give number $R $NUMBER is not greater than 100"
 fi
