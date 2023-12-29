@@ -12,6 +12,8 @@ echo "script name: $0"
 
 LOGFILE="/tmp/$0-TIMESTAMP.log"
 
+echo "script started executing at $TIMESTAMP" &>> LOGFILE
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then    
