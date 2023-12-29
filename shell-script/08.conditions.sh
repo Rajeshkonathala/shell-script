@@ -1,8 +1,12 @@
 #!/bin/bash
 NUMBER=$1
+R= e\[31m
+G= e\[32m
+Y= e\[33m
+N= e\[0m
 if [ "$NUMBER" -gt 100 ]
 then
-    echo "Give number $NUMBER is greater than 100"
+    echo -e "Give number $NUMBER is $G greater $N than 100"
 else
-    echo "Give number $NUMBER is not greater than 100"
+    echo "Give number $NUMBER is $R not greater $N than 100"
 fi
