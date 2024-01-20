@@ -20,5 +20,5 @@ fi #fi means reverse of if, indication of condition end
 
 for package in $@
 do
-    
-    done
+    yum installed $packages
+done
