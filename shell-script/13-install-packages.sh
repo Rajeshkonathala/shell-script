@@ -14,4 +14,11 @@ else
     echo "you are root user"
 fi #fi means reverse of if, indication of condition end
 
-echo "All args passed: $@"
+#echo "All args passed: $@"
+# git mysql postfix net-tools
+# package=git for first time
+
+for package in $@
+do
+    
+done
