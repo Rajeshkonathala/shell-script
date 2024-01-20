@@ -6,6 +6,20 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+TIMESTAMP=(date +%F-%H-%M-%S)
+LOGFILE= "/tmp/$0-TIMESTAMP.log"
+
+echo "Script started executed at $TIMESTAMP" &>> $LOGFILE
+
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then
+        echo -e "$2 .. $R FAILED $N"
+    else
+        echo -e "$2 .. $G SUCESS $N"
+    fi
+}
+
 if [ $ID -ne 0 ]
 then
     echo -e "ERROR:: $R Please run this script with root access $N"
@@ -20,8 +34,12 @@ fi #fi means reverse of if, indication of condition end
 
 for package in $@
 do
-    yum installed $packages
+    yum installed $packages &>> $LOGFILE # package is installed
     if [ $? -ne 0 ]
     then
-        yum install $package -y
+        yum install $package -y &>> $LOGFILE # if not then install the package
+        VALIDATE $? " Installation of $packaege" # validate the package
+    else
+        echo -e "$package is already installed... $Y Skipping $N"
+    fi
 done
