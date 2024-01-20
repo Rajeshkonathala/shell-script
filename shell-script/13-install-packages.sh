@@ -6,9 +6,10 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-TIMESTAMP=( date +%F-%H-%M-%S )
+TIMESTAMP=(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "Script started executed at $TIMESTAMP"
+echo "Script started executed at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE(){
     if [ $1 -ne 0 ]
